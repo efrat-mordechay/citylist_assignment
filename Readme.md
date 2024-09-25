@@ -4,27 +4,27 @@
 
 I used the latest Python 3.12 version
 
-The following packages needs to be installed in order for the script to run:
-os
-argparse
-pandas (will also install pyarrow)
-pandavro (will also install fastavro)
-time
-datetime
-logging
-numpy (to support pandavro, version 1.24.3 is needed)
-cramjam (this is used in decompression)
-bleach (was need to run on my machine, may not be needed in yours)
+The following packages needs to be installed in order for the script to run:  
+os  
+argparse  
+pandas (will also install pyarrow)  
+pandavro (will also install fastavro)  
+time  
+datetime  
+logging  
+numpy (to support pandavro, version 1.24.3 is needed)  
+cramjam (this is used in decompression)  
+bleach (was need to run on my machine, may not be needed in yours)  
 
 <h2>Script Usage</h2>
 
-citylist_script.py [-h] -i INPUT [-o OUTPUT] [-e ERROR]
+citylist_script.py [-h] -i INPUT [-o OUTPUT] [-e ERROR]  
 
--i: is required and is the path to the location of the files to process
--o: Optional. The output path for the final dataset after removing duplicates and sorting. If not specified, it will be written to the location where you run the script from.
--e: Optional. The path to write all the errors and information logs throughout the script. If not specified, it will be written to the location where you run the script from.
+-i: is required and is the path to the location of the files to process  
+-o: Optional. The output path for the final dataset after removing duplicates and sorting. If not specified, it will be written to the location where you run the script from.  
+-e: Optional. The path to write all the errors and information logs throughout the script. If not specified, it will be written to the location where you run the script from.  
 
-The script supports the following file extensions and can easily add more:
+The script supports the following file extensions and can easily add more:  
 CSV, AVRO, JSON, DAT and Parquet
 
 <h2>Outputs</h2>
@@ -33,16 +33,16 @@ CSV, AVRO, JSON, DAT and Parquet
 The location is based on the use of -o in the script.
 2. file_errors_YYYYmmdd_HHMMSS.log: The errors generated throughout the runtime of the script while handling file loading, YYYYmmdd_HHMMSS is based on the time and date the script ran in the machine's timezone.
 The location is based on the use of -e in the script. The is empty if there are no errors.
-3. Output to the screen, which includes how much time it took to load the file, total runtime, the answers to question 1-3 and the number of rows in the generated file.
-Example of output:
-Script started
-Load time: 0.0431 seconds
-The total number of rows in all files is 2583
-The total number of unique rows is 2078
-The city with the largest population is: Mumbai (Bombay)
-The total population in all the cities in Brazil is: 55955012.0
-Runtime: 0.0960 seconds
-Script ended
+3. Output to the screen, which includes how much time it took to load the file, total runtime, the answers to question 1-3 and the number of rows in the generated file.  
+Example of output:  
+Script started  
+Load time: 0.0431 seconds  
+The total number of rows in all files is 2583  
+The total number of unique rows is 2078  
+The city with the largest population is: Mumbai (Bombay)  
+The total population in all the cities in Brazil is: 55955012.0  
+Runtime: 0.0960 seconds  
+Script ended  
 
 <h2>Architecture</h2>
 I decided to use python and pandas dataframe for this assignment for 2 main reasons:
