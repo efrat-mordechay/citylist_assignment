@@ -1,5 +1,8 @@
 <h1>City List Assignment - Answers</h1>
 
+<h2>Remove Duplicates</h2>
+I removed duplicates based on 'Name' and 'CountryCode' and calculated the mean for the population as I had no prior knowledge on which data set is correct I decided to take the average ,so it will be in between the results rather than taking the maximum for example, which I would have taken had I known that cities Population is only ever increasing. When having a lot more duplicates, choosing the mean will reduce the total error from the actual result.
+
 <h2>Question 1</h2>
 What is the count of all rows? </br>
 2583 </br>
